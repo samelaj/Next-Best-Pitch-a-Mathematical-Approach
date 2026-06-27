@@ -257,6 +257,9 @@ Each experiment cell produces:
 - `docs/diagrams/lstm_architecture.png` — LSTM architecture and flow
 - `docs/diagrams/transformer_architecture.png` — Transformer architecture and flow
 
+- memory/ — point-in-time research state snapshots; 
+- re-synced from ~/.claude/projects/... at each phase commit
+
 ---
 
 ## Key Constraints
