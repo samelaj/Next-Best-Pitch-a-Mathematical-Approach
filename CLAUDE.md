@@ -250,6 +250,15 @@ Each experiment cell produces:
 
 ---
 
+## Documentation
+
+- `README.md` — public-facing project overview, research design, findings, repo structure
+- `docs/diagrams/bayesian_markov_architecture.png` — Bayesian Markov architecture and flow
+- `docs/diagrams/lstm_architecture.png` — LSTM architecture and flow
+- `docs/diagrams/transformer_architecture.png` — Transformer architecture and flow
+
+---
+
 ## Key Constraints
 
 - Individual pitcher models only — no cross-pitcher inference in early experiments
@@ -285,6 +294,8 @@ Each experiment cell produces:
 | Item | Status |
 |---|---|
 | Architecture design | ✅ Complete |
+| README.md | ✅ Complete |
+| Architecture diagrams | ✅ Complete |
 | Experiment matrix defined (3×3) | ✅ Complete |
 | Reward functions defined | ✅ Complete — revised to terminal MDP (Option A) 2026-06-27 |
 | Evaluation methodology (history-aware, return-based) | ✅ Defined (Option A) |
@@ -292,9 +303,10 @@ Each experiment cell produces:
 | Model stack defined | ✅ Complete |
 | Data source confirmed (Statcast) | ✅ Complete (Gerrit Cole 2021–2023, cached) |
 | Exp 1A — Type / Whiff (memoryless eval, Phase 2–3) | ⚠️ Built & run, but metric deprecated (memoryless) |
-| Exp 1A — Type / Whiff (terminal reward, Option A) | 🔄 In progress — re-running under new evaluator |
-| Exp 1B — Type / Weak Contact | 🔲 Not started |
-| Exp 1C — Type / Combined | 🔲 Not started |
+| Exp 1A — Type / Whiff (terminal reward, Option A) | ✅ Complete |
+| Exp 1B — Type / Weak Contact | ✅ Complete |
+| Exp 1C — Type / Combined | ✅ Complete |
+| Row 1 memory files | ✅ Complete |
 | Exp 2A — Location / Whiff | 🔲 Not started |
 | Exp 2B — Location / Weak Contact | 🔲 Not started |
 | Exp 2C — Location / Combined | 🔲 Not started |
