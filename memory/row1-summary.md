@@ -47,6 +47,16 @@ Key teaching insight (18.6% disagreement states):
   on what you are trying to induce. Phase 5 agreement analysis
   will map all disagreement states.
 
+  ** REVISED by Phase 5 (see [[phase5-agreement]]): the 18.6% is
+  the reward-aware ORACLE's disagreement, NOT Bayesian Markov's
+  (BM is reward-agnostic → 100% agreement). And the 18.6% is
+  SPARSE-CELL NOISE: the dominant 0-0 LHH case (63% of it) is
+  whiff->SI built on just 2 training pitches. After a ≥10-train /
+  ≥20-holdout reliability bar, ZERO reward-differentiated cards
+  survive. Type-only cannot resolve the whiff-vs-weak-contact
+  tradeoff — motivates Row 2. The trustworthy teaching output is
+  the 29 high-confidence reward-INDEPENDENT agreement states. **
+
 NN architectural fixes queued for Rows 2-3:
   1. Richer action space (location, type+location)
   2. Per-pitch shaping rewards to densify learning signal

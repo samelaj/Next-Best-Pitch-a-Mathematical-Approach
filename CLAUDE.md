@@ -316,6 +316,15 @@ Each experiment cell produces:
 | Exp 3A — Type+Location / Whiff | 🔲 Not started |
 | Exp 3B — Type+Location / Weak Contact | 🔲 Not started |
 | Exp 3C — Type+Location / Combined | 🔲 Not started |
+| Row 1 cross-experiment agreement analysis (Phase 5) | ✅ Complete |
 | Secondary models (GRU, MLP, BLR, HMM) | 🔲 Not started |
-| Cross-model agreement analysis | 🔲 Not started |
+| Cross-model agreement analysis (Rows 2–3) | 🔲 Not started |
 | Platform integration design | 🔲 Not started |
+
+---
+
+## Key Findings
+
+**Row 1 (pitch type only — Exp 1A/1B/1C).** Bayesian Markov is the stable platform model; the LSTM/Transformer are unstable, degenerate, off-distribution, and fallback-propped on the type-only action space at ~1,600 at-bats (seed std 3–4× the eval SE; dominant pitch flips across seeds). NN architectural fixes (richer action space, per-pitch shaping, conservative-Q, league base model) are queued for Rows 2–3.
+
+**Row 1 Phase 5 (agreement analysis).** Bayesian Markov is **reward-agnostic** on pitch-type-only — it recommends by transition frequency, so its pick is **identical across 1A/1B/1C for all 107 holdout states (100% agreement)**. The trustworthy teaching output is therefore a single reward-independent reference: 29 high-confidence states (CI width < 0.2, ≥20 holdout pitches), predominantly "throw the 4-seam," with a few slider/changeup states. **Revision to the earlier 18.6% disagreement finding:** that figure comes only from the reward-aware return-max *oracle*, and it is **sparse-cell noise, not a coachable signal** — its dominant case (0-0 vs LHH, 63% of all disagreement pitches) recommends a sinker for whiff based on just **2 training pitches**, and after requiring each pick to rest on ≥10 training pitches, **zero** trustworthy reward-differentiated states remain. **Conclusion:** the pitch-type-only action space cannot resolve the whiff-vs-weak-contact strategic question — the strongest motivation yet for Row 2 (location).

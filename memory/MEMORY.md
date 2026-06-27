@@ -15,4 +15,7 @@ Files:
   exp1c-finding.md      — Exp 1C results (combined reward,
                           weight sensitivity)
   row1-summary.md       — full Row 1 cross-experiment summary,
-                          18.6% disagreement finding, NN fixes queued
+                          NN fixes queued (18.6% claim revised by phase5)
+  phase5-agreement.md   — Row 1 agreement analysis: BM reward-agnostic
+                          (100% agree); 18.6% disagreement is sparse-cell
+                          noise; trustworthy output = 29 hi-conf states
